@@ -1,5 +1,9 @@
 # The Red Crayon - API
 
+### DEPLOYED API HEROKU [LINK](project5-drf-api.herokuapp.com)
+### DEPLOYED FRONTEND HEORKU [LINK - LIVE SITE](https://red-crayon.herokuapp.com/)
+### DEPLOYED FRONTEND [REPOSITORY](https://github.com/CluelessBiker/project5-red-crayon)
+
 ## Deployment:
 ### Project creation:
 - Create the GitHub repository.
@@ -203,9 +207,6 @@ pip3 freeze --local > requirements.txt
 - Navigate back to heroku, and under the ‘Deploy’ tab, connect the GitHub repository.
 - Deploy the branch.
 
-## CONFIGURE DRF API
-### STEPS : [HERE]()
-### DEPLYED HEROKU [LINK](project5-drf-api.herokuapp.com)
-
-
-- Default image Photo by Artem Podrez from [Pexels](https://www.pexels.com/photo/image-of-a-whale-made-of-scrap-materials-7048043/)
+### CREDITS:
+- Default post image Photo by Artem Podrez from [Pexels](https://www.pexels.com/photo/image-of-a-whale-made-of-scrap-materials-7048043/)
+- Default profile image from [Favicon](https://favicon.io/emoji-favicons/alien-monster)
