@@ -26,43 +26,44 @@ class Post(models.Model):
     ]
 
     music_medium_choices = [
-        'cassette',
-        'CD',
-        'minidisc',
-        'vinyl',
-        'mp3',
-        'radio',
-        'none',
+        ('cassette', 'Cassette'),
+        ('CD', 'CD'),
+        ('minidisc', 'Minidisc'),
+        ('vinyl', 'Vinyl'),
+        ('mp3', 'mp3'),
+        ('radio', 'Radio'),
+        ('none', 'None'),
     ]
 
     beverage_choices = [
-        'water',
-        'soda',
-        'juice',
-        'coffee',
-        'wine',
-        'beer',
-        'cocktail',
-        'spirits',
-        'none',
+        ('water', 'Water'),
+        ('soda', 'Soda'),
+        ('juice', 'Juice'),
+        ('coffee', 'Coffee'),
+        ('tea', 'Tea'),
+        ('wine', 'Wine'),
+        ('beer', 'Beer'),
+        ('cocktail', 'Cocktail'),
+        ('spirits', 'Spirits'),
+        ('none', 'None'),
     ]
 
     artistic_medium_choices = [
-        'acrylic paint',
-        'oil paint',
-        'water colours',
-        'spray paint',
-        'coloured pencils',
-        'markers',
-        'photography',
-        'videography',
-        'digital',
-        'coding',
-        'wood',
-        'clay',
-        'metal',
-        'glass',
-        'none',
+        ('acrylic_paint', 'Acrylic paint'),
+        ('oil_paint', 'Oil paint'),
+        ('water_colours', 'Water colours'),
+        ('spray_paint', 'Spray paint'),
+        ('coloured_pencils', 'Coloured pencils'),
+        ('markers', 'Markers'),
+        ('photography', 'Photography'),
+        ('videography', 'Videography'),
+        ('digital', 'Digital'),
+        ('coding', 'Coding'),
+        ('wood', 'Wood'),
+        ('clay', 'Clay'),
+        ('metal', 'Metal'),
+        ('glass', 'Glass'),
+        ('none', 'None'),
     ]
 
     owner = models.ForeignKey(User, on_delete=models.CASCADE)
@@ -93,7 +94,7 @@ class Post(models.Model):
         default='none'
     )
     artistic_medium = models.CharField(
-        max_length=10,
+        max_length=20,
         choices=artistic_medium_choices,
         default='none'
     )
