@@ -206,3 +206,6 @@ pip3 freeze --local > requirements.txt
 ## CONFIGURE DRF API
 ### STEPS : [HERE]()
 ### DEPLYED HEROKU [LINK](project5-drf-api.herokuapp.com)
+
+
+- Default image Photo by Artem Podrez from [Pexels](https://www.pexels.com/photo/image-of-a-whale-made-of-scrap-materials-7048043/)
