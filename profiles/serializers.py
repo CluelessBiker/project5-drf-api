@@ -2,6 +2,7 @@ from rest_framework import serializers
 from .models import Profile
 
 
+# Class provided by DRF-API walkthrough.
 class ProfileSerializer(serializers.ModelSerializer):
     """
     Profile serializer.
