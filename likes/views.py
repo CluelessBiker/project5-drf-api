@@ -11,7 +11,7 @@ class LikeList(generics.ListCreateAPIView):
     to like/unlike a post.
     """
     permissions_classes = [permissions.IsAuthenticatedOrReadOnly]
-    serilaizer_class = LikeSerializer
+    serializer_class = LikeSerializer
     queryset = Like.objects.all()
 
     def perform_create(self, serializer):
