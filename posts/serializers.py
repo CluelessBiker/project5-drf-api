@@ -22,13 +22,16 @@ class PostSerializer(serializers.ModelSerializer):
         Produce error warning to inform user.
         """
         if value.size > 2 * 1024 * 1024:
-            raise serializers.ValidationError('Image must be smaller than 2MB.')
+            raise serializers.ValidationError(
+                'Image must be smaller than 2MB.')
 
         if value.image.height > 4096:
-            raise serializers.ValidationError('Height must be smaller than 4096px.')
+            raise serializers.ValidationError(
+                'Height must be smaller than 4096px.')
 
         if value.image.width > 4096:
-            raise serializers.ValidationError('Width must be smaller than 4096px.')
+            raise serializers.ValidationError(
+                'Width must be smaller than 4096px.')
 
         return value
 
