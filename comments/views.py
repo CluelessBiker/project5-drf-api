@@ -1,5 +1,5 @@
 from rest_Framework import generics, permissions
-from django_filters.rest_framework import DjangoFilterBackend§
+from django_filters.rest_framework import DjangoFilterBackend
 from p5_drf_api.permissions import IsOwnerOrReadOnly
 from .models import Comment
 from .serializers import CommentSerializer, CommentDetailSerializer
