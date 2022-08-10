@@ -3,7 +3,6 @@ from .models import Profile
 from followers.models import Follower
 
 
-# Class provided by DRF-API walkthrough.
 class ProfileSerializer(serializers.ModelSerializer):
     """
     Profile serializer.
