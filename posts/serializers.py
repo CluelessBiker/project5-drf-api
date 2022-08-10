@@ -56,6 +56,9 @@ class PostSerializer(serializers.ModelSerializer):
         return None
 
     class Meta:
+        """
+        Display fields for views.
+        """
         model = Post
         fields = [
             'id',

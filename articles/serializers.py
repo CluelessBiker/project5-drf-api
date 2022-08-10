@@ -51,4 +51,3 @@ class ArticleSerializer(serializers.ModelSerializer):
         'profile_id',
         'profile_image',
         ]
-
