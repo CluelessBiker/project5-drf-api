@@ -1,8 +1,49 @@
 # The Red Crayon - API
+The Red Crayon is a News platform for the artistic world. Users can read the latest articles on what is occurring in the art scene, as well as interact with other users via posts, comments, and following. This section of the project is to support the backend API database, and it is powered by the Django Rest Framework.
 
-### DEPLOYED API HEROKU [LINK](project5-drf-api.herokuapp.com)
-### DEPLOYED FRONTEND HEORKU [LINK - LIVE SITE](https://red-crayon.herokuapp.com/)
-### DEPLOYED FRONTEND [REPOSITORY](https://github.com/CluelessBiker/project5-red-crayon)
+#### DEPLOYED API HEROKU [LINK](project5-drf-api.herokuapp.com)
+#### DEPLOYED FRONTEND HEORKU [LINK - LIVE SITE](https://red-crayon.herokuapp.com/)
+#### DEPLOYED FRONTEND [REPOSITORY](https://github.com/CluelessBiker/project5-red-crayon)
+
+## Table of Contents
++ [User Stories](#user-stories "User Stories")
+  + [Admin stories](#admin-stories "Admin stories")
+  + [Artist stories](#artist-stories "Artist stories")
+  + [Visitor stories](#visitor-stories "Visitor stories")
++ [Testing](#testing "Testing")
+  + [Validator Testing](#validator-testing "Validator Testing")
+  + [Unfixed Bugs](#unfixed-bugs "Unfixed Bugs")
++ [Technologies Used](#technologies-used "Technologies Used")
+  + [Main Languages Used](#main-languages-used "Main Languages Used")
+  + [Frameworks, Libraries & Programs Used](#frameworks-libraries-programs-used "Frameworks, Libraries & Programs Used")
++ [Deployment](#deployment "Deployment")
++ [Credits](#credits "Credits")
+  + [Content](#content "Content")
+  + [Media](#media "Media")
+
+## Usesr Stories:
+
+## Testing:
+### Validator Testing: 
+- [PEP8](http://pep8online.com/)
+
+### Unfixed Bugs
+- None
+
+## Technologies Used:
+### Main Languages Used:
+- Python
+
+### Frameworks, Libraries & Programs Used:
+- Django
+- Django RestFramework
+- Cloudinary
+- Heroku
+- Pillow
+- Django Rest Auth
+- PostgreSQL
+- Cors Headers
+- DrawSQL
 
 ## Deployment:
 ### Project creation:
@@ -28,15 +69,15 @@ django-cors-headers
 django-admin startproject project_name .
 ```
 - navigate back to [Heroku](heroku.com), and under the Settings tab, add the following configvars:
-1. Key: SECRET_KEY | Value: arandomsecretkey
+1. Key: SECRET_KEY | Value: hidden
 2. Key: CLOUDINARY_URL | Value: cloudinary://hidden
 3. Key: DISABLE_COLLECTSTATIC | Value: 1
 4. Key: ALLOWED_HOST | Value: api-app-name.herokuapp.com
 - Add two additional configvars once the ReactApp has been created:
 5. Key: CLIENT_ORIGIN | Value: https://react-app-name.herokuapp.com
 6. Key: CLIENT_ORIGIN_DEV | Value: https://gitpod-browser-link.ws-eu54.gitpod.io
-- Remember to remove the trailing slash `\` at the end of both links!
-- Also, gitpod occasionally updated the browser preview link. Should this occur, the CLIENT_ORIGIN_DEV value shall need to be updated.
+- Check that the trailing slash `\` at the end of both links has been removed.
+- Gitpod occasionally updates the browser preview link. Should this occur, the CLIENT_ORIGIN_DEV value shall need to be updated.
 
 - create the env.py file, and add the following variables. The value for DATABASE_URL will be obtained from the Heroku configvars in the previous step:
 ```
@@ -44,12 +85,12 @@ import os
 
 os.environ['CLOUDINARY_URL'] = 'cloudinary://hidden'
 os.environ['DEV'] = '1'
-os.environ['SECRET_KEY'] = 'arandomsecretkey'
+os.environ['SECRET_KEY'] = 'hidden'
 os.environ['DATABASE_URL'] = 'postgres://hidden'
 ```
 ### In settings.py: 
-For reference, refer to: [DRF-API walkthrough settings.py](https://github.com/Code-Institute-Solutions/drf-api/blob/2c0931a2b569704f96c646555b0bee2a4d883f01/drf_api/settings.py)
-- Add the following to INSTALLED_APPs to support the newly installed packages:
+<!-- For reference, refer to: [DRF-API walkthrough settings.py](https://github.com/Code-Institute-Solutions/drf-api/blob/2c0931a2b569704f96c646555b0bee2a4d883f01/drf_api/settings.py) -->
+- Add the following to INSTALLED_APPS to support the newly installed packages:
 ```
 'cloudinary_storage',
 'django.contrib.staticfiles',
@@ -73,7 +114,7 @@ import dj_database_url
 ```
 import re
 ```
-- Import the env.py cloudinary settings:
+- Import the env.py settings:
 ```
 import os
 if os.path.exists('env.py')
@@ -106,15 +147,6 @@ REST_FRAMEWORK = {
     'DATETIME_FORMAT': '%d %b %Y',
 }
 ```
-<!-- - Add page pagination within the REST_FRAMEWORK to improve loading times:
-```
-'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
-'PAGE_SIZE': 10,
-```
-- Add DATETIME_FORMAT to REST_FRAMEWORK to adjust readability.
-```
-'DATETIME_FORMAT': '%d %b %Y',
-``` -->
 - Set the default renderer to JSON:
 ```
 if 'DEV' not in os.environ:
@@ -157,8 +189,7 @@ DATABASES = {
 os.environ.get('ALLOWED_HOST'),
 'localhost',
 ```
-- Below ALLOWED_HOST, add the CORS_ALLOWED as shown in lines 67-74 in the [DRF-API walkthrough](https://github.com/Code-Institute-Solutions/drf-api/blob/2c0931a2b569704f96c646555b0bee2a4d883f01/drf_api/settings.py).
-- IMPORTANT!: this code has now been modified, as indicated in the final lesson of the [DRF-API walkthrough](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+DRF+2021_T1/courseware/a6250c9e9b284dbf99e53ac8e8b68d3e/0c9a4768eea44c38b06d6474ad21cf75/?child=first), and needs to instead be:
+- Below ALLOWED_HOST, add the CORS_ALLOWED as shown in [DRF-API walkthrough](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+DRF+2021_T1/courseware/a6250c9e9b284dbf99e53ac8e8b68d3e/0c9a4768eea44c38b06d6474ad21cf75/?child=first):
 ```
 if 'CLIENT_ORIGIN' in os.environ:
     CORS_ALLOWED_ORIGINS = [
@@ -207,6 +238,13 @@ pip3 freeze --local > requirements.txt
 - Navigate back to heroku, and under the ‘Deploy’ tab, connect the GitHub repository.
 - Deploy the branch.
 
-### CREDITS:
+## CREDITS:
+
+### Content:
+- The creation of this API database was provided through the step by step guide of the C.I. DRF-API walkthrough project.
+- All classes & functions have been credited.
+- Modifications have been made to the 'Profiles' & 'Posts' app models, and an additional app along with models, serializers & views have abeen created by me.
+
+### Media:
 - Default post image Photo by Artem Podrez from [Pexels](https://www.pexels.com/photo/image-of-a-whale-made-of-scrap-materials-7048043/)
 - Default profile image from [Favicon](https://favicon.io/emoji-favicons/alien-monster)
