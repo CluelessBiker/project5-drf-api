@@ -10,7 +10,7 @@ class LikeList(generics.ListCreateAPIView):
     Provide logged in users the ability
     to like/unlike a post.
     """
-    permissions_classes = [permissions.IsAuthenticatedOrReadOnly]
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
     serializer_class = LikeSerializer
     queryset = Like.objects.all()
 
@@ -28,6 +28,6 @@ class LikeDetail(generics.RetrieveDestroyAPIView):
     The ability to create/delete
     a like.
     """
-    permissions_classes = [IsOwnerOrReadOnly]
+    permission_classes = [IsOwnerOrReadOnly]
     serilaizer_class = LikeSerializer
     queryset = Like.objects.all()
