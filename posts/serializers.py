@@ -55,4 +55,26 @@ class PostSerializer(serializers.ModelSerializer):
 
         return None
 
-    
+    class Meta:
+        model = Post
+        fields = [
+            'id',
+            'owner',
+            'is_owner',
+            'profile_id',
+            'profile_image',
+            'created_on',
+            'modified_on',
+            'title',
+            'description',
+            'image',
+            'image_filter',
+            'music_medium',
+            'song_name',
+            'artist_name',
+            'beverage',
+            'artistic_medium',
+            'like_id',
+            'likes_count',
+            'comments_count',
+        ]
