@@ -22,17 +22,17 @@ class CommentSerializer(serializers.ModelSerializer):
         request = self.context['request']
         return request.user == obj.owner
 
-    def get_created_at(self, obj):
+    def get_created_on(self, obj):
         """
         Display time elapsed since comment created.
         """
         return naturaltime(obj.created_on)
 
-    def get_updated_at(self, obj):
+    def get_modified_on(self, obj):
         """
         Display time elapsed since comment modified.
         """
-        return naturaltime(ob.modified_on)
+        return naturaltime(obj.modified_on)
 
     class Meta:
         """

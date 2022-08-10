@@ -23,10 +23,11 @@ class ProfileSerializer(serializers.ModelSerializer):
         request = self.context['request']
         return request.user == obj.owner
 
-    def get_following_count(self, obj):
+    def get_following_id(self, obj):
         """
         Returns following count for individual user
         """
+        user = self.context['request'].user
         if user.is_authenticated:
             following = Follower.objects.filter(
                 owner=user,

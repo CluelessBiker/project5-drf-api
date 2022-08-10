@@ -47,7 +47,7 @@ class PostSerializer(serializers.ModelSerializer):
         user = self.context['request'].user
 
         if user.is_authenticated:
-            like = Likes.objects.filter(
+            like = Like.objects.filter(
                 owner=user,
                 post=obj
             ).first()

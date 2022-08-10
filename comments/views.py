@@ -1,4 +1,4 @@
-from rest_Framework import generics, permissions
+from rest_framework import generics, permissions
 from django_filters.rest_framework import DjangoFilterBackend
 from p5_drf_api.permissions import IsOwnerOrReadOnly
 from .models import Comment
@@ -27,7 +27,7 @@ class CommentList(generics.ListCreateAPIView):
         Save comment to user details.
         If user is authenticated."
         """
-        serializer.save(owner='self.request.user')
+        serializer.save(owner=self.request.user)
 
 
 # Class provided by DRF-API walkthrough.
@@ -37,4 +37,4 @@ class CommentDetail(generics.RetrieveUpdateDestroyAPIView):
     """
     permission_classes = [IsOwnerOrReadOnly]
     serializer_class = CommentDetailSerializer
-    queryset = Comment.objects.all
+    queryset = Comment.objects.all()
