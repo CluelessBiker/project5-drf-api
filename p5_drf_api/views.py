@@ -9,7 +9,7 @@ from .settings import (
 @api_view()
 def root_route(request):
     return Response({
-        "message": "Welcome The Red Crayon API!"
+        "message": "Welcome to The Red Crayon API!"
     })
 
 

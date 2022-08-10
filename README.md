@@ -7,9 +7,7 @@ The Red Crayon is a News platform for the artistic world. Users can read the lat
 
 ## Table of Contents
 + [User Stories](#user-stories "User Stories")
-  + [Admin stories](#admin-stories "Admin stories")
-  + [Artist stories](#artist-stories "Artist stories")
-  + [Visitor stories](#visitor-stories "Visitor stories")
++ [Database](#database "Database")
 + [Testing](#testing "Testing")
   + [Validator Testing](#validator-testing "Validator Testing")
   + [Unfixed Bugs](#unfixed-bugs "Unfixed Bugs")
@@ -22,10 +20,26 @@ The Red Crayon is a News platform for the artistic world. Users can read the lat
   + [Media](#media "Media")
 
 ## Usesr Stories:
+![]()
+
+## Database:
+![SQL Database model](/static/images-readme/readme-models.png)
 
 ## Testing:
 ### Validator Testing: 
-- [PEP8](http://pep8online.com/)
+- All files passed through [PEP8](http://pep8online.com/) without error.
+- Four errors were left unresolved in `settings.py` file, as they were supplied by Django.
+![PEP8](/static/images-readme/readme-pep8.png)
+
+### Manual Testing:
+1. Manually verified each url path created works & opens without error.
+2. Verified that the CRUD functionality is available in each app: Articles, Comments, Followers, Likes, Posts, Profiles
+ - Checked this by going to each link.
+ - Creating a new item.
+ - Checking new item URL path. 
+ - Editing the item (not available for Likes, Followers or Users)
+ - Deleting the item (Not available for Users or Profiles)
+3. Ensured search feature for Posts & Articles apps returns results.
 
 ### Unfixed Bugs
 - None
