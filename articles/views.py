@@ -1,4 +1,4 @@
-from rest_framework import generics, permissions
+from rest_framework import generics, permissions, filters
 from p5_drf_api.permissions import IsOwnerOrReadOnly
 from .models import Article
 from .serializers import ArticleSerializer
@@ -18,6 +18,15 @@ class ArticleList(generics.ListCreateAPIView):
         save article.
         """
         serializer.save(owner=self.request.user)
+
+    filter_backends = [
+        filters.SearchFilter,
+    ]
+
+    search_fields = [
+        'owner__username',
+        'title',
+    ]
 
 
 class ArticleDetail(generics.RetrieveUpdateDestroyAPIView):
