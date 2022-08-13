@@ -34,7 +34,7 @@ class Profile(models.Model):
         Changing display name from ID
         to username.
         """
-        return f"{self.username}'s profile."
+        return f"{self.owner}'s profile."
 
 
 # Function provided by DRF-API walkthrough.

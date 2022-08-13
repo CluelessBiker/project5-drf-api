@@ -31,7 +31,7 @@ class ProfileSerializer(serializers.ModelSerializer):
         if user.is_authenticated:
             following = Follower.objects.filter(
                 owner=user,
-                followed=obj.owner,
+                followed=obj.owner
             ).first()
             return following.id if following else None
         return None
