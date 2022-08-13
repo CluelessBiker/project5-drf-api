@@ -35,13 +35,21 @@ The Red Crayon is a News platform for the artistic world. Users can read the lat
 
 ### Manual Testing:
 1. Manually verified each url path created works & opens without error.
-2. Verified that the CRUD functionality is available in each app: Articles, Comments, Followers, Likes, Posts, Profiles
+2. Verified that the CRUD functionality is available in each app via the development version: Articles, Comments, Followers, Likes, Posts, Profiles
  - Checked this by going to each link.
  - Creating a new item.
  - Checking new item URL path. 
  - Editing the item (not available for Likes, Followers or Users)
  - Deleting the item (Not available for Users or Profiles)
 3. Ensured search feature for Posts & Articles apps returns results.
+4. Repeated the steps for the deployed API, and all pages except `/profiles` would load.
+- checked the code, and was unable to find an error, other than the "Server Error (500)" on the deployed link.
+- Reached out to Tutor support, and Ger was able to detect that the issue was with the database model.
+- reset the database with the following command:
+```
+python3 manage.py migrate profiles zero
+```
+- upon completion, all links were now viable on the Heroku deployed link.
 
 ### Unfixed Bugs
 - None
