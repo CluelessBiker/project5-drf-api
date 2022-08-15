@@ -50,6 +50,19 @@ The Red Crayon is a News platform for the artistic world. Users can read the lat
 python3 manage.py migrate profiles zero
 ```
 - upon completion, & migrating the database once again , all links were now viable on the Heroku deployed link.
+5. Frontend App throws a 500 error when saving the posts form.
+- Logged in to admin panel of deployed API app. The same error arises.
+- migrated the posts app back to zero, and made the migrations again. The issue persists.
+- backed up the database `python manage.py dumpdata > db.json`, & then ran the following commands:
+```
+heroku pg:info -a project5-drf-api
+heroku pg:reset -a project5-drf-api
+```
+- deleted `0001_initial.py` files & `__pycache__` from the migration folders in all apps.
+- Ran the `makemigrations` & `migrate` commands again
+- Was now able to create a post via the deployed admin panel.
+- upon returning to the development version of the app, we were now unable to login or create a new user
+- clearing the browser cookies & cache, as well as relaunching the gitpod workspace resolved this.
 
 ### Unfixed Bugs
 - None
@@ -263,6 +276,7 @@ pip3 freeze --local > requirements.txt
 - The creation of this API database was provided through the step by step guide of the C.I. DRF-API walkthrough project.
 - All classes & functions have been credited.
 - Modifications have been made to the 'Profiles' & 'Posts' app models, and an additional app along with models, serializers & views have been created by me.
+- Oisin from Tutor support went above & beyond to assist me in resolving an issue with my database that prevented new posts from being created. The steps we took have been documented in point #5 of the Manual Testing section.
 
 ### Media:
 - Default post image Photo by Artem Podrez from [Pexels](https://www.pexels.com/photo/image-of-a-whale-made-of-scrap-materials-7048043/)
