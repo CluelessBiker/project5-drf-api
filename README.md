@@ -45,11 +45,11 @@ The Red Crayon is a News platform for the artistic world. Users can read the lat
 4. Repeated the steps for the deployed API, and all pages except `/profiles` would load.
 - checked the code, and was unable to find an error, other than the "Server Error (500)" on the deployed link.
 - Reached out to Tutor support, and Ger was able to detect that the issue was with the database model.
-- reset the database with the following command:
+- reset the database with the following commands:
 ```
 python3 manage.py migrate profiles zero
 ```
-- upon completion, all links were now viable on the Heroku deployed link.
+- upon completion, & migrating the database once again , all links were now viable on the Heroku deployed link.
 
 ### Unfixed Bugs
 - None
