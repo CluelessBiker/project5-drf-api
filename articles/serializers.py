@@ -12,8 +12,6 @@ class ArticleSerializer(serializers.ModelSerializer):
     profile_id = serializers.ReadOnlyField(source='owner.profile.id')
     profile_image = serializers.ReadOnlyField(source='owner.profile.image.url')
 
-    # category = serializers.ReadOnlyField(source='category.name')
-    # is_category = serializers.SerializerMethodField()
     category = serializers.PrimaryKeyRelatedField(queryset=Category.objects.all())
 
     def validate_image(self, value):
@@ -42,13 +40,6 @@ class ArticleSerializer(serializers.ModelSerializer):
         request = self.context['request']
         return request.user == obj.owner
 
-    # def get_is_category(self, obj):
-    #     """
-    #     Return correct category.
-    #     """
-    #     request = self.context['request']
-    #     return request.category == obj.category
-
     class Meta:
         """
         Display fields for views.
@@ -62,7 +53,6 @@ class ArticleSerializer(serializers.ModelSerializer):
             'content',
             'image',
             'category',
-            # 'is_category',
             'created_on',
             'modified_on',
             'profile_id',
