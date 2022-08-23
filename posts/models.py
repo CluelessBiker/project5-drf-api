@@ -9,44 +9,44 @@ class Post(models.Model):
     Posts Model related to Owner/User.
     """
     music_medium_choices = [
+        ('none', 'None'),
         ('cassette', 'Cassette'),
         ('CD', 'CD'),
         ('minidisc', 'Minidisc'),
-        ('vinyl', 'Vinyl'),
         ('mp3', 'mp3'),
         ('radio', 'Radio'),
-        ('none', 'None'),
+        ('vinyl', 'Vinyl'),
     ]
 
     beverage_choices = [
+        ('none', 'None'),
         ('water', 'Water'),
-        ('soda', 'Soda'),
         ('juice', 'Juice'),
-        ('coffee', 'Coffee'),
+        ('soda', 'Soda'),
         ('tea', 'Tea'),
+        ('coffee', 'Coffee'),
         ('wine', 'Wine'),
         ('beer', 'Beer'),
         ('cocktail', 'Cocktail'),
         ('spirits', 'Spirits'),
-        ('none', 'None'),
     ]
 
     artistic_medium_choices = [
-        ('acrylic_paint', 'Acrylic paint'),
-        ('oil_paint', 'Oil paint'),
-        ('water_colours', 'Water colours'),
-        ('spray_paint', 'Spray paint'),
-        ('coloured_pencils', 'Coloured pencils'),
-        ('markers', 'Markers'),
-        ('photography', 'Photography'),
-        ('videography', 'Videography'),
-        ('digital', 'Digital'),
-        ('coding', 'Coding'),
-        ('wood', 'Wood'),
-        ('clay', 'Clay'),
-        ('metal', 'Metal'),
-        ('glass', 'Glass'),
         ('none', 'None'),
+        ('acrylic_paint', 'Acrylic paint'),
+        ('clay', 'Clay'),
+        ('coding', 'Coding'),
+        ('coloured_pencils', 'Coloured pencils'),
+        ('digital', 'Digital'),
+        ('glass', 'Glass'),
+        ('markers', 'Markers'),
+        ('metal', 'Metal'),
+        ('oil_paint', 'Oil paint'),
+        ('photography', 'Photography'),
+        ('spray_paint', 'Spray paint'),
+        ('videography', 'Videography'),
+        ('water_colours', 'Water colours'),
+        ('wood', 'Wood'),
     ]
 
     owner = models.ForeignKey(User, on_delete=models.CASCADE)
