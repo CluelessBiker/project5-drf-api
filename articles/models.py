@@ -18,7 +18,8 @@ class Article(models.Model):
     category = models.ForeignKey(
         Category,
         on_delete=models.CASCADE,
-        default='none'
+        blank=True,
+        null=True
     )
     created_on = models.DateTimeField(auto_now_add=True)
     modified_on = models.DateTimeField(auto_now=True)
