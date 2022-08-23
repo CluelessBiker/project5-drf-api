@@ -3,7 +3,7 @@ from categories.models import Category
 from categories.serializers import CategorySerializer
 
 
-class CategoryList(generices.ListCreateAPIView):
+class CategoryList(generics.ListCreateAPIView):
     """
     Category list.
     """
