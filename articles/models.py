@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from categories.models import Category
 
 
 class Article(models.Model):
@@ -13,6 +14,11 @@ class Article(models.Model):
         upload_to='images/',
         default='../pexels-artem-podrez-7048043_jblpym',
         blank=True
+    )
+    category = models.ForeignKey(
+        Category,
+        on_delete=models.CASCADE,
+        default='none'
     )
     created_on = models.DateTimeField(auto_now_add=True)
     modified_on = models.DateTimeField(auto_now=True)
