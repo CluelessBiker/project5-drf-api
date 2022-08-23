@@ -50,7 +50,6 @@ class ProfileSerializer(serializers.ModelSerializer):
             'image',
             'first_name',
             'last_name',
-            'username',
             'country',
             'is_owner',
             'following_id',
