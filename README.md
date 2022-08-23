@@ -55,6 +55,7 @@ python3 manage.py migrate profiles zero
 - migrated the posts app back to zero, and made the migrations again. The issue persists.
 - backed up the database `python manage.py dumpdata > db.json`, & then ran the following commands:
 ```
+heroku login -i
 heroku pg:info -a project5-drf-api
 heroku pg:reset -a project5-drf-api
 ```
