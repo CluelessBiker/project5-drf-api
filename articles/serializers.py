@@ -49,6 +49,7 @@ class ArticleSerializer(serializers.ModelSerializer):
             'title',
             'content',
             'image',
+            'category',
             'created_on',
             'modified_on',
             'profile_id',
