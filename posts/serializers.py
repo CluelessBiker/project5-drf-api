@@ -74,7 +74,6 @@ class PostSerializer(serializers.ModelSerializer):
             'title',
             'description',
             'image',
-            'image_filter',
             'music_medium',
             'song_name',
             'artist_name',
