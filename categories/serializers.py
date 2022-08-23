@@ -6,7 +6,7 @@ class CategorySerializer(serializers.ModelSerializer):
     """
     Category serializer model.
     """
-    category = serializers.ReadOnlyField(source='category.category')
+    name = serializers.ReadOnlyField(source='category.name')
 
     class Meta:
         """
@@ -16,5 +16,5 @@ class CategorySerializer(serializers.ModelSerializer):
         fields = [
             'id',
             'created_on',
-            'category',
+            'name',
         ]
