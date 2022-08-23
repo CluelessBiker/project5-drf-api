@@ -1,7 +1,7 @@
 # The Red Crayon - API
 The Red Crayon is a News platform for the artistic world. Users can read the latest articles on what is occurring in the art scene, as well as interact with other users via posts, comments, and follows. This section of the project is the backend API database built to support the ReactJS frontend, and it is powered by the Django Rest Framework.
 
-#### DEPLOYED API HEROKU [LINK](project5-drf-api.herokuapp.com)
+#### DEPLOYED API HEROKU [LINK](https://project5-drf-api.herokuapp.com)
 #### DEPLOYED FRONTEND HEORKU [LINK - LIVE SITE](https://red-crayon.herokuapp.com/)
 #### DEPLOYED FRONTEND [REPOSITORY](https://github.com/CluelessBiker/project5-red-crayon)
 
