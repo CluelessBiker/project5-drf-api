@@ -11,6 +11,9 @@ class ArticleSerializer(serializers.ModelSerializer):
     profile_id = serializers.ReadOnlyField(source='owner.profile.id')
     profile_image = serializers.ReadOnlyField(source='owner.profile.image.url')
 
+    category = serializers.ReadOnlyField(source='category.category')
+    # is_owner = serializers.SerializerMethodField()
+
     def validate_image(self, value):
         """
         Restrict size of image upload.
