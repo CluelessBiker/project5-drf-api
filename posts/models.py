@@ -8,23 +8,6 @@ class Post(models.Model):
     """
     Posts Model related to Owner/User.
     """
-    image_filter_choices = [
-        ('_1977', '1977'),
-        ('brannan', 'Brannan'),
-        ('earlybird', 'Earlybird'),
-        ('hudson', 'Hudson'),
-        ('inkwell', 'Inkwell'),
-        ('lofi', 'Lo-Fi'),
-        ('kelvin', 'Kelvin'),
-        ('normal', 'Normal'),
-        ('nashville', 'Nashville'),
-        ('rise', 'Rise'),
-        ('toaster', 'Toaster'),
-        ('valencia', 'Valencia'),
-        ('walden', 'Walden'),
-        ('xpro2', 'X-pro II')
-    ]
-
     music_medium_choices = [
         ('cassette', 'Cassette'),
         ('CD', 'CD'),
@@ -75,11 +58,6 @@ class Post(models.Model):
         upload_to='images/',
         default='../pexels-artem-podrez-7048043_jblpym',
         blank=True
-    )
-    image_filter = models.CharField(
-        max_length=32,
-        choices=image_filter_choices,
-        default='normal'
     )
     music_medium = models.CharField(
         max_length=10,
