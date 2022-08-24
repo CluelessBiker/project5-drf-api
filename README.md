@@ -61,7 +61,11 @@ heroku pg:info -a project5-drf-api
 heroku pg:reset -a project5-drf-api
 ```
 - deleted `0001_initial.py` files & `__pycache__` from the migration folders in all apps.
-- Ran the `makemigrations` & `migrate` commands again
+- Ran the migration commands again:
+```
+python3 manage.py makemigrations
+python3 manage.py migrate
+```
 - Was now able to create a post via the deployed admin panel.
 - upon returning to the development version of the app, we were now unable to login or create a new user
 - clearing the browser cookies & cache, as well as relaunching the gitpod workspace resolved this.
