@@ -11,21 +11,7 @@ class ArticleSerializer(serializers.ModelSerializer):
     is_owner = serializers.SerializerMethodField()
     profile_id = serializers.ReadOnlyField(source='owner.profile.id')
     profile_image = serializers.ReadOnlyField(source='owner.profile.image.url')
-    # display_category = serializers.ReadOnlyField(source='category.name')
-    # category = serializers(source='category.name')
 
-    # category = serializers.PrimaryKeyRelatedField(queryset=Category.objects.all())
-    # category = serializers.RelatedField.to_representation(
-    #     source='category',
-    #     read_only=True
-    # )
-    # category = serializers.PrimaryKeyRelatedField(source='category.name')
-    # category = serializers.ReadOnlyField(source='category.name')
-    # category = serializers.RelatedField(source='category.name')
-    # category_props = PropsSerializer(read_only=True, many=True)
-    # category = serializers.SlugRelatedField(slug_field='name', read_only=True)
-    # category = serializers.CharField(source="category.name", write_only=True)
-    # category = serializers.SerializerMethodField()
 
     def validate_image(self, value):
         """

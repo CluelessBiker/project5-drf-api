@@ -1,12 +1,19 @@
 from django.db import models
 from django.contrib.auth.models import User
-from categories.models import Category
 
 
 class Article(models.Model):
     """
     Articles model.
     """
+    category_choices = [
+        ('entertainment', 'Entertainment'),
+        ('events', 'Events'),
+        ('in_depth', 'In-depth'),
+        ('opinion', 'Opinion'),
+        ('news', 'News'),
+    ]
+
     owner = models.ForeignKey(User, on_delete=models.CASCADE)
     title = models.CharField(max_length=300)
     content = models.TextField(blank=False)
@@ -16,10 +23,10 @@ class Article(models.Model):
         blank=True
     )
     image_credit = models.CharField(max_length=200)
-    category = models.ForeignKey(
-        Category,
-        on_delete=models.CASCADE,
-        null=True
+    category = models.CharField(
+        max_length=55,
+        choices=category_choices,
+        default='news'
     )
     created_on = models.DateTimeField(auto_now_add=True)
     modified_on = models.DateTimeField(auto_now=True)
