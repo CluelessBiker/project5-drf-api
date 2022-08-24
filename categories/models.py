@@ -8,7 +8,7 @@ class Category(models.Model):
     category_choices = [
         ('entertainment', 'Entertainment'),
         ('events', 'Events'),
-        ('in_depth', 'In Depth'),
+        ('in_depth', 'In-depth'),
         ('opinion', 'Opinion'),
         ('news', 'News'),
     ]
@@ -20,6 +20,7 @@ class Category(models.Model):
         default='news'
     )
 
+
     class Meta:
         """
         Order categories.
@@ -30,4 +31,4 @@ class Category(models.Model):
         """
         Return Category name.
         """
-        return f'Category: {self.name}'
+        return self.name
