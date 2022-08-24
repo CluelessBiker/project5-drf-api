@@ -15,6 +15,7 @@ class Article(models.Model):
         default='../pexels-artem-podrez-7048043_jblpym',
         blank=True
     )
+    image_credit = models.CharField(max_length=200)
     category = models.ForeignKey(
         Category,
         on_delete=models.CASCADE,
