@@ -1,6 +1,5 @@
 from rest_framework import serializers
 from .models import Article
-# from categories.models import Category
 
 
 class ArticleSerializer(serializers.ModelSerializer):
