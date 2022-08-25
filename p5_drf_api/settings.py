@@ -121,6 +121,7 @@ INSTALLED_APPS = [
     'comments',
     'articles',
     'categories',
+    'events',
 ]
 
 SITE_ID = 1
