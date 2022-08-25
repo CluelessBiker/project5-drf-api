@@ -35,4 +35,5 @@ urlpatterns = [
     path('', include('comments.urls')),
     path('', include('articles.urls')),
     path('', include('categories.urls')),
+    path('', include('events.urls')),
 ]
