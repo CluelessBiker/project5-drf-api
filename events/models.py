@@ -13,7 +13,7 @@ class Event(models.Model):
     time = models.TimeField(null=True, blank=True)
     city = models.CharField(max_length=50)
     country = models.CharField(max_length=50)
-    price = IntegerField(null=True, blank=True)
+    price = models.IntegerField(null=True, blank=True)
     event_link = models.URLField('Event URL', max_length=400, blank=True)
     created_on = models.DateTimeField(auto_now_add=True)
     modified_on = models.DateTimeField(auto_now=True)
