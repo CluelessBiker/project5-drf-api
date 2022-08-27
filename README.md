@@ -20,28 +20,28 @@ The Red Crayon is a News platform for the artistic world. Users can read the lat
   + [Media](#media "Media")
 
 ## User Stories:
-![User stories](/static/images-readme/readme-userstories.png)
-- I have included links to the [GitHub Issues](https://github.com/CluelessBiker/project5-red-crayon/issues) for this project, as well as the [KANBAN board](https://github.com/users/CluelessBiker/projects/2).
+All User Stories have been documented in their own file, the link for which can be found [HERE](static/userstories.md).
+
+I have included links to the [GitHub Issues](https://github.com/CluelessBiker/project5-red-crayon/issues) for this project, as well as the [KANBAN board](https://github.com/users/CluelessBiker/projects/2).
 
 ## Database:
 ![SQL Database model](/static/images-readme/readme-models.png)
 
 ## Testing:
 ### Validator Testing: 
-- All files passed through [PEP8](http://pep8online.com/) without error.
-- Four errors were left unresolved in `settings.py` file, as the settings were supplied by Django.
+All files passed through [PEP8](http://pep8online.com/) without error.
 
 ![PEP8](/static/images-readme/readme-pep8.png)
 
 ### Manual Testing:
 1. Manually verified each url path created works & opens without error.
-2. Verified that the CRUD functionality is available in each app via the development version: Articles, Comments, Followers, Likes, Posts, Profiles
+2. Verified that the CRUD functionality is available in each app via the development version: Articles, Events, Comments, Followers, Likes, Posts, Profiles
  - Checked this by going to each link.
  - Creating a new item.
  - Checking new item URL path. 
  - Editing the item (not available for Likes, Followers or Users)
  - Deleting the item (Not available for Users or Profiles)
-3. Ensured search feature for Posts & Articles apps returns results.
+3. Ensured search feature for Posts, Events & Articles apps returns results.
 4. Repeated the steps for the deployed API, and all pages except `/profiles` would load.
 - checked the code, and was unable to find an error, other than the "Server Error (500)" on the deployed link.
 - Reached out to Tutor support, and Ger was able to detect that the issue was with the database model.
@@ -65,6 +65,10 @@ heroku pg:reset -a project5-drf-api
 ```
 python3 manage.py makemigrations
 python3 manage.py migrate
+```
+- created a new super user to test functionality
+```
+python3 manage.py createsuperuser
 ```
 - Was now able to create a post via the deployed admin panel.
 - upon returning to the development version of the app, we were now unable to login or create a new user
@@ -272,7 +276,7 @@ python3 manage.py migrate
 ```
 pip3 freeze --local > requirements.txt
 ```
-24. Added, commited & pushed the changes to GitHub
+24. Added, committed & pushed the changes to GitHub
 25. Navigated back to heroku, and under the ‘Deploy’ tab, connect the GitHub repository.
 26. Deployed the branch.
 
