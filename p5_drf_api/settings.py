@@ -40,6 +40,7 @@ REST_FRAMEWORK = {
         'rest_framework.pagination.PageNumberPagination',
     'PAGE_SIZE': 10,
     'DATETIME_FORMAT': '%d %b %Y',
+    'TIME_FORMAT': '%H:%M',
 }
 
 if 'DEV' not in os.environ:
