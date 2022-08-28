@@ -41,7 +41,8 @@ All files passed through [PEP8](http://pep8online.com/) without error.
  - Checking new item URL path. 
  - Editing the item (not available for Likes, Followers or Users)
  - Deleting the item (Not available for Users or Profiles)
-3. Ensured search feature for Posts, Events & Articles apps returns results.
+3. Ensured search feature for Posts, Events & Articles apps returns results. Results not filtered for events:
+ - Checked the views file for Events. Filter & search field functions were not indented correctly. Once amended, the search bar produced the desired results.
 4. Repeated the steps for the deployed API, and all pages except `/profiles` would load.
  - checked the code, and was unable to find an error, other than the "Server Error (500)" on the deployed link.
  - Reached out to Tutor support, and Ger was able to detect that the issue was with the database model.
