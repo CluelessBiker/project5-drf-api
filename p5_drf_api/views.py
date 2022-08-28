@@ -5,6 +5,7 @@ from .settings import (
     JWT_AUTH_SECURE,
 )
 
+
 # Code provided in DRF-API walkthrough.
 @api_view()
 def root_route(request):
