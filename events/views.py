@@ -19,16 +19,16 @@ class EventList(generics.ListCreateAPIView):
         """
         serializer.save(owner=self.request.user)
 
-        filter_backends = [
-            filters.SearchFilter,
-        ]
+    filter_backends = [
+        filters.SearchFilter,
+    ]
 
-        search_fields = [
-            'owner__username',
-            'title',
-            'city',
-            'country',
-        ]
+    search_fields = [
+        'owner__username',
+        'title',
+        'city',
+        'country',
+    ]
 
 
 class EventDetail(generics.RetrieveUpdateDestroyAPIView):
