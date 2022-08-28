@@ -43,36 +43,36 @@ All files passed through [PEP8](http://pep8online.com/) without error.
  - Deleting the item (Not available for Users or Profiles)
 3. Ensured search feature for Posts, Events & Articles apps returns results.
 4. Repeated the steps for the deployed API, and all pages except `/profiles` would load.
-- checked the code, and was unable to find an error, other than the "Server Error (500)" on the deployed link.
-- Reached out to Tutor support, and Ger was able to detect that the issue was with the database model.
-- reset the database with the following commands:
+ - checked the code, and was unable to find an error, other than the "Server Error (500)" on the deployed link.
+ - Reached out to Tutor support, and Ger was able to detect that the issue was with the database model.
+ - reset the database with the following commands:
 ```
 python3 manage.py migrate profiles zero
 ```
-- upon completion, & migrating the database once again , all links were now viable on the Heroku deployed link.
+ - upon completion, & migrating the database once again , all links were now viable on the Heroku deployed link.
 5. Frontend App throws a 500 error when saving the posts form.
-- Logged in to admin panel of deployed API app. The same error arises.
-- migrated the posts app back to zero, and made the migrations again. The issue persists.
-- backed up the database `python manage.py dumpdata > db.json`, & then ran the following commands:
+ - Logged in to admin panel of deployed API app. The same error arises.
+ - migrated the posts app back to zero, and made the migrations again. The issue persists.
+ - backed up the database `python manage.py dumpdata > db.json`, & then ran the following commands:
 ```
 curl https://cli-assets.heroku.com/install.sh | sh
 heroku login -i
 heroku pg:info -a project5-drf-api
 heroku pg:reset -a project5-drf-api
 ```
-- deleted `0001_initial.py` files & `__pycache__` from the migration folders in all apps.
-- Ran the migration commands again:
+ - deleted `0001_initial.py` files & `__pycache__` from the migration folders in all apps.
+ - Ran the migration commands again:
 ```
 python3 manage.py makemigrations
 python3 manage.py migrate
 ```
-- created a new super user to test functionality
+ - created a new super user to test functionality
 ```
 python3 manage.py createsuperuser
 ```
-- Was now able to create a post via the deployed admin panel.
-- upon returning to the development version of the app, we were now unable to login or create a new user
-- clearing the browser cookies & cache, as well as relaunching the gitpod workspace resolved this.
+ - Was now able to create a post via the deployed admin panel.
+ - upon returning to the development version of the app, we were now unable to login or create a new user
+ - clearing the browser cookies & cache, as well as relaunching the gitpod workspace resolved this.
 
 ### Unfixed Bugs
 - None
@@ -285,7 +285,7 @@ pip3 freeze --local > requirements.txt
 ### Content:
 - The creation of this API database was provided through the step by step guide of the C.I. DRF-API walkthrough project.
 - All classes & functions have been credited.
-- Modifications have been made to the 'Profiles' & 'Posts' app models, and an additional app along with models, serializers & views have been created by me.
+- Modifications have been made to the 'Profiles' & 'Posts' app models, and an additional two apps along with models, serializers & views have been created by me.
 - Oisin from Tutor support went above & beyond to assist me in resolving an issue with my database that prevented new posts from being created. The steps we took have been documented in point #5 of the Manual Testing section.
 
 ### Media:
