@@ -4,7 +4,7 @@
 1. As a **user** I would like to **create an account** so that I can **access all the site features**
  - Story points: 2
 
-2 . As a **user** I would like to **login** so that I can **interact with the content available only to users**
+2. As a **user** I would like to **login** so that I can **interact with the content available only to users**
  - Story points: 1
 
 3. As a **user** I would like to **logout** so that I can **exit my account & prevent others from gaining access**
@@ -13,7 +13,7 @@
 4. As a **user** I would like to **quickly determine my logged in/out status** so that I can **decide on my next action**
  - Story points: 3
 
-.5 As an **admin** I would like to **refresh access tokens** so that **users can remain logged in for 24h**
+5. As an **admin** I would like to **refresh access tokens** so that **users can remain logged in for 24h**
  - Story points: 2
 
 ### Epic 2 : Navigation	

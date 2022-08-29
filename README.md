@@ -2,7 +2,7 @@
 The Red Crayon is a News platform for the artistic world. Users can read the latest articles on what is occurring in the art scene, as well as interact with other users via posts, comments, and follows. This section of the project is the backend API database built to support the ReactJS frontend, and it is powered by the Django Rest Framework.
 
 #### DEPLOYED API HEROKU [LINK](https://project5-drf-api.herokuapp.com)
-#### DEPLOYED FRONTEND HEORKU [LINK - LIVE SITE](https://red-crayon.herokuapp.com/)
+#### DEPLOYED FRONTEND HEROKU [LINK - LIVE SITE](https://red-crayon.herokuapp.com/)
 #### DEPLOYED FRONTEND [REPOSITORY](https://github.com/CluelessBiker/project5-red-crayon)
 
 ## Table of Contents
@@ -76,7 +76,7 @@ python3 manage.py createsuperuser
  - clearing the browser cookies & cache, as well as relaunching the gitpod workspace resolved this.
 
 ### Unfixed Bugs
-- None
+- None so far.
 
 ## Technologies Used:
 ### Main Languages Used:
@@ -91,7 +91,7 @@ python3 manage.py createsuperuser
 - Django Rest Auth
 - PostgreSQL
 - Cors Headers
-- DrawSQL
+- DrawSQL: An interactive ERD platform that allows you to set up your database tables, & build the connections between them for a visual layout.
 
 ## Deployment:
 ### Project creation:
