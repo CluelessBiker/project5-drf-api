@@ -1,8 +1,8 @@
 # The Red Crayon - API
 The Red Crayon is a News platform for the artistic world. Users can read the latest articles on what is occurring in the art scene, as well as interact with other users via posts, comments, and follows. This section of the project is the backend API database built to support the ReactJS frontend, and it is powered by the Django Rest Framework.
 
-#### DEPLOYED API HEROKU [LINK](https://project5-drf-api.herokuapp.com)
-#### DEPLOYED FRONTEND HEROKU [LINK - LIVE SITE](https://red-crayon.herokuapp.com/)
+#### DEPLOYED BACKEND API RENDER [LINK](https://project5-drf-api.onrender.com)
+#### DEPLOYED FRONTEND RENDER [LINK - LIVE SITE](https://project5-red-crayon.onrender.com)
 #### DEPLOYED FRONTEND [REPOSITORY](https://github.com/CluelessBiker/project5-red-crayon)
 
 ## Table of Contents
@@ -280,6 +280,9 @@ pip3 freeze --local > requirements.txt
 24. Added, committed & pushed the changes to GitHub
 25. Navigated back to heroku, and under the ‘Deploy’ tab, connect the GitHub repository.
 26. Deployed the branch.
+
+### Deploy to Render & ElephantSQL:
+* Due to Heroku revoking their frie tier access, the project has been redeployed using (Render)[https://render.com/] & (ElephantSQL)[https://www.elephantsql.com/] using the following [instructions](https://code-institute-students.github.io/deployment-docs/41-pp5-adv-fe/pp5-adv-fe-drf-01-create-a-database)
 
 ## CREDITS:
 
