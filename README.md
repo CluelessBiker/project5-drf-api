@@ -251,6 +251,7 @@ if 'CLIENT_ORIGIN_DEV' in os.environ:
 ```
 - During a deployment issue, it was suggested by a fellow student, Johan, to add the following lines of code below CORS_ALLOW_CREDENTIALS:
 ```
+CORS_ALLOW_ALL_ORIGINS = True
 CORS_ALLOW_HEADERS = list(default_headers)
 CORS_ALLOW_METHODS = list(default_methods)
 CSRF_TRUSTED_ORIGINS = [os.environ.get(
